@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import re
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from googletrans import Translator
@@ -20,6 +21,35 @@ translator = Translator()
 pesticides = pd.read_csv("pesticides.csv")
 prices = pd.read_csv("pesticide_prices.csv")
 
+# Text cleaning function
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r'[^a-zA-Z ]', '', text)
+    return text
+
+# Keyword disease detection
+def keyword_disease_detection(text):
+    text = text.lower()
+
+    if "yellow" in text:
+        return "Nutrient Deficiency"
+    elif "white" in text or "fungus" in text or "powder" in text:
+        return "Powdery Mildew"
+    elif "hole" in text or "insect" in text:
+        return "Insect Attack"
+    elif "curl" in text:
+        return "Leaf Curl"
+    elif "wilt" in text or "droop" in text:
+        return "Fusarium Wilt"
+    elif "root" in text:
+        return "Root Rot"
+    elif "brown" in text or "dry" in text:
+        return "Leaf Blight"
+    elif "spot" in text:
+        return "Leaf Spot"
+    else:
+        return None
+
 st.title("Telugu Crop Disease Diagnosis System")
 
 # Telugu input
@@ -34,10 +64,18 @@ if st.button("Predict Disease"):
     english_text = translated.text
     st.write("Translated Text:", english_text)
 
-    seq = tokenizer.texts_to_sequences([english_text])
-    padded = pad_sequences(seq, maxlen=10)
-    pred = model.predict(padded)
-    disease = le.inverse_transform([pred.argmax()])[0]
+    # Clean text
+    english_text = clean_text(english_text)
+
+    # First try keyword detection
+    disease = keyword_disease_detection(english_text)
+
+    # If no keyword match, use ML model
+    if disease is None:
+        seq = tokenizer.texts_to_sequences([english_text])
+        padded = pad_sequences(seq, maxlen=10)
+        pred = model.predict(padded)
+        disease = le.inverse_transform([pred.argmax()])[0]
 
     st.session_state.disease = disease
 

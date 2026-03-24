@@ -1,13 +1,36 @@
 location,pesticide,price_rs,shop
-Hyderabad,Mancozeb,460,Rythu Bazaar
-Hyderabad,Neem Oil,190,Agro Store
-Hyderabad,Sulfur,310,Kisan Agro
-Warangal,Mancozeb,440,Farm Center
-Warangal,Neem Oil,170,Agro Shop
-Warangal,Sulfur,300,Kisan Store
-Vijayawada,Mancozeb,455,Rythu Market
-Vijayawada,Neem Oil,180,Agri Shop
-Guntur,Mancozeb,450,Kisan Store
-Guntur,Neem Oil,175,Agro Center
-Nalgonda,Sulfur,295,Farm Shop
-Karimnagar,Imidacloprid,620,Kisan Agro
+Aziznagar,Mancozeb,455,Rythu Depot
+Aziznagar,Sulfur,305,Agro Mart
+Aziznagar,Copper Fungicide,415,Kisan Store
+Aziznagar,Carbendazim,495,Agro Center
+Aziznagar,Imidacloprid,610,Farm Supplies
+Aziznagar,NPK Fertilizer,345,Rythu Depot
+Aziznagar,Dimethoate,470,Agro Mart
+Aziznagar,Metalaxyl,540,Kisan Store
+
+Chilkur,Mancozeb,450,Agro Shop
+Chilkur,Sulfur,300,Farm Center
+Chilkur,Copper Fungicide,410,Agro Shop
+Chilkur,Carbendazim,490,Farm Center
+Chilkur,Imidacloprid,605,Agro Shop
+Chilkur,NPK Fertilizer,340,Farm Center
+Chilkur,Dimethoate,465,Agro Shop
+Chilkur,Metalaxyl,535,Farm Center
+
+Mehdipatnam,Mancozeb,460,City Agro
+Mehdipatnam,Sulfur,310,Urban Agro Store
+Mehdipatnam,Copper Fungicide,420,City Agro
+Mehdipatnam,Carbendazim,500,Urban Agro Store
+Mehdipatnam,Imidacloprid,620,City Agro
+Mehdipatnam,NPK Fertilizer,350,Urban Agro Store
+Mehdipatnam,Dimethoate,480,City Agro
+Mehdipatnam,Metalaxyl,550,Urban Agro Store
+
+Hitech City,Mancozeb,470,Agri Mall
+Hitech City,Sulfur,320,Agri Mall
+Hitech City,Copper Fungicide,430,Agri Mall
+Hitech City,Carbendazim,510,Agri Mall
+Hitech City,Imidacloprid,630,Agri Mall
+Hitech City,NPK Fertilizer,360,Agri Mall
+Hitech City,Dimethoate,490,Agri Mall
+Hitech City,Metalaxyl,560,Agri Mall
