@@ -1,0 +1,7 @@
+streamlit
+tensorflow-cpu==2.15.0
+pandas
+scikit-learn
+googletrans==4.0.0-rc1
+numpy
+h5py
