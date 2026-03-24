@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import re
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from googletrans import Translator
 
@@ -27,7 +27,7 @@ def clean_text(text):
     text = re.sub(r'[^a-zA-Z ]', '', text)
     return text
 
-# Keyword disease detection
+# Keyword disease detection (Rule-based NLP)
 def keyword_disease_detection(text):
     text = text.lower()
 
@@ -50,7 +50,7 @@ def keyword_disease_detection(text):
     else:
         return None
 
-st.title("Telugu Crop Disease Diagnosis System")
+st.title("AI Based Telugu Crop Disease Diagnosis & Pesticide Recommendation System")
 
 # Telugu input
 telugu_input = st.text_input("వ్యాధి లక్షణాలు తెలుగులో నమోదు చేయండి:")
